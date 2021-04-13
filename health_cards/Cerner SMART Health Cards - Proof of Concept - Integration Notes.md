@@ -2,12 +2,13 @@
 
 This is the guide for integrating with Cerner's COVID-19 SMART Health Cards implementation. 
 
-Quick Table of Contents:
-* [Integration Notes](#Integration%20Notes)
-* [Health Card Endpoints](#Health%20Card%20Endpoints)
-* [Example Call](#Example%20Call)
-* [Quick-Start Guide](#Quick-Start%20Guide)
-* 
+**Table of Contents:**
+* [Integration Notes](#Integration-Notes)
+* [Health Card Endpoints](#Health-Card-Endpoints)
+* [Example Call](#Example-Call)
+* [Quick-Start Guide](#Quick-Start-Guide)
+* [Additional Utility Endpoints](#additional-utility-endpoints)
+* [Further Links / References](#further-links--references)
 
 ## Integration Notes
 
@@ -224,6 +225,6 @@ POST https://fhir-myrecord.stagingcerner.com/beta/admin/health-cards/decode
 ```
  
 
-## Further Links / Reading
+## Further Links / References
 * SMART Health Cards: https://smarthealth.cards/
 * Vaccination & Testing Implementation Guide: http://build.fhir.org/ig/dvci/vaccine-credential-ig/branches/main/
