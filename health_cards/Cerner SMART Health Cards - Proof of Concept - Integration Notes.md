@@ -45,7 +45,7 @@ POST https://fhir-myrecord.stagingcerner.com/beta/ec2458f2-1e24-41c8-b71b-0e701a
     },
     {
       "name": "credentialType",
-      "valueUri": "https://smarthealth.cards#immnization"
+      "valueUri": "https://smarthealth.cards#immunization"
     }
   ]
 }
