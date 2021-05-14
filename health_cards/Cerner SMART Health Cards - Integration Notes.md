@@ -90,7 +90,7 @@ Use our CODE Developer Portal to register and define your application: https://c
 You can then request authorization tokens by following our Authorization guide:  http://fhir.cerner.com/authorization/#requesting-authorization-on-behalf-of-a-user
 * Your registered application will automatically generate your Client ID. You can find this in the [Code Developer Portal](https://code.cerner.com/developer/smart-on-fhir/apps)
 * Authorizing for a Patient token will redirect you to our patient login portal. You can use any of our test patient credentials: https://docs.google.com/document/d/10RnVyF1etl_17pyCyK96tyhUWRbrTyEcqpwzW-Z-Ybs
-* **Note**: the audience to use for the Connectathon is https%3A%2F%2Ffhir-myrecord.cerner.com%2Fr4%2Fec2458f2-1e24-41c8-b71b-0e701af7583d
+* **Note**: the audience (`aud` Authorize parameter) to use for the Connectathon is `https%3A%2F%2Ffhir-myrecord.cerner.com%2Fr4%2Fec2458f2-1e24-41c8-b71b-0e701af7583d`
 
 ### Issue a HealthCard
 
