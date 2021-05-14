@@ -12,7 +12,6 @@ This is the guide for integrating with Cerner's COVID-19 SMART Health Cards impl
 
 ## Integration Notes
 
-* Every response is hard-coded to be the same (mocked response) - This is a Proof of Concept
 * Cerner's implementation only supports the FHIR-based operation: https://smarthealth.cards/#via-fhir-health-cards-issue-operation 
 * Cerner's implementation only supports Immunizations. Lab Results are not yet supported.
 * Cerner's implementation does not yet support the optional claims (like `_since` and `includeIdentityClaim`)
@@ -66,7 +65,7 @@ POST https://fhir-myrecord.stagingcerner.com/beta/ec2458f2-1e24-41c8-b71b-0e701a
 
 ## Quick-Start Guide
 
-This is just the steps you'll need to take to integrate with Cerner's Proof-of-Concept 
+This is just the steps you'll need to take to integrate with Cerner's Health Cards Functionality
 
 ### Read Cerner's Documentation
 
