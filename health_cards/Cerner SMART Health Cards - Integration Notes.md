@@ -223,6 +223,60 @@ POST https://fhir-myrecord.stagingcerner.com/beta/admin/health-cards/decode
 }
 ```
  
+## Test Patient Information
+### Gilbert, Alice S
+* Patient ID: 12742542
+* Date of Birth: Nov 16, 1970
+* MRN: 9002472173
+* Administrative Gender: Female
+* Inpatient FIN: 16048
+* Inpatient Location: Model Hospital, MX Hospital, ICU, 101, A
+* Patient Access Login
+  * Username: alicegilbert1
+  * Password: Cerner01
+* Observations
+  * COVID-19 Test - Positive
+* Immunizations
+  * COVID-19 Vaccination - 2 dose; Moderna
+  * influenza
+  * measles
+  * influenza virus vaccine, H5N1, inactive
+  * diphtheria toxoid
+
+### Triplett, Kristen B
+* Patient ID: 12742544
+* Date of Birth: Nov 15, 1980
+* MRN: 9004575813
+* Administrative Gender: Female
+* Inpatient FIN: 16049
+* Inpatient Location: Model Hospital, MX Hospital, ICU
+* Patient Access Login
+  * Username: ktriplett1
+  * Password: Cerner01
+* Observations
+  * COVID-19 Test - Positive
+* Immunizations
+  * COVID-19 Vaccination - 2 dose; Pfizer
+  * tetanus toxoid
+  * measles/mumps/rubella
+  * influenza
+
+### SMART, Fredrick
+* Patient ID: 12724070
+* Date of Birth: August 22, 1946
+* MRN: 6935
+* Administrative Gender: Male
+* Inpatient FIN: 16004
+* Inpatient Location: Model Hospital, MX Hospital, NU04, 101, A
+* Outpatient FIN: 15962
+* Outpatient Location: Model Clinic 1, MX Clinic 1, MX Clinic 1
+* Patient Access Login
+  * Username: fredricksmart
+  * Password: Cerner01
+* Immunizations
+  * COVID-19 Vaccination - None
+  * tetanus toxoid
+
 
 ## Further Links / References
 * SMART Health Cards: https://smarthealth.cards/
