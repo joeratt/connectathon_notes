@@ -8,6 +8,7 @@ This is the guide for integrating with Cerner's COVID-19 SMART Health Cards impl
 * [Example Call](#Example-Call)
 * [Quick-Start Guide](#Quick-Start-Guide)
 * [Additional Utility Endpoints](#additional-utility-endpoints)
+* [Test Patient Information](#test-patient-information)
 * [Further Links / References](#further-links--references)
 
 ## Integration Notes
