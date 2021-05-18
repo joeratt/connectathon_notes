@@ -41,11 +41,11 @@ POST https://fhir-myrecord.stagingcerner.com/beta/ec2458f2-1e24-41c8-b71b-0e701a
   "parameter": [
     {
       "name": "credentialType",
-      "valueUri": "https://smarthealth.cards#covid19"
+      "valueUri": "https://smarthealth.cards#immunization"
     },
     {
       "name": "credentialType",
-      "valueUri": "https://smarthealth.cards#immunization"
+      "valueUri": "https://smarthealth.cards#covid19"
     }
   ]
 }
@@ -58,7 +58,41 @@ POST https://fhir-myrecord.stagingcerner.com/beta/ec2458f2-1e24-41c8-b71b-0e701a
     "parameter": [
         {
             "name": "verifiableCredential",
-            "valueString": "eyJhbGciOiJFUzI1NiIsInppcCI6IkRFRiIsImtpZCI6IlhVTVR0Q2pfYUlFejdWaFo0Y05YLVdKd0V1ckxBWnQ0SjRPa2dvNEc5ZFkifQ.3VJNc9MwEP0rjLj6S24aJzkxlEM5FJhpCwemB1laJwJ9eCQ5aej4v7PrJKWH0ANHPL5I-_Te27f7xHSMbMU2KfVxVZbdRofc7gNIH1QRk1hrt5YQHIRCelu2kEQJsp5dLro651DP8hmXi7xteJtX0FRcdM3l4kKxjGmR2IrP-YI3y-VynrGtZKsn9k56l-ARa9-fZXe7XbG7KHxYl3XFF6UMoMAlLUwst5w9ZCzte6AXXyHoTovWwNUzBrVORNGKkDYgTNoUUgQV3x4OOR1exUm_1YovX8Voawenf4mkvSNTf2zeDu0PkIn6owjRZSTMis2KqqiQlG7fD04ZIEyA6Icg4W7qih0Lpy6Z9MYgGzFkDAXCHltH5sGY-2AQcHq_IurT4QzxF7SK7xHkhIUDibDaIB-7_nbj5c_PjnTXeguO4r0SwfiIN7ebvXDY5IhtrsEpCPikAysmn63GZD6IRBp82VR5xfOqxoJQCi3ESan3uD_myitCzWe8WiBA-uHQD7u_ZePDOGZn--Kv9_Xx5SAyhjppiFNwtjeQgEa9FVJqBwf9JywpXOXJWNzHBPa49TjojWmm1aMZlVGrUm4fJ6uT87pqyGjG-mOYk50OAjjy9nIWCPJSDmEqUTx32h4oason55SA8enTYNsp0Io-yq2H0Plg6RINCpl8IB2lY28EpXWDZsybax97jaGy8e_R1f9hdDyvz0ZX8X_NDv9x_A0.Swhe0EFn3flfcT1hg0_ZyWTPdANux9fpEZvKJpyeZFLqzlWQaqBns9ejc3Wdu9YbfeHpO1uj_6g2Ikn_lQA4HQ"
+            "valueString": "eyJhbGciOiJFUzI1NiIsInppcCI6IkRFRiIsImtpZCI6IkJlbXNQUm83dTBrTFd4ZERKSzk2cmx4ZHFhOVpicjJsSXhzZmU3VGlFMTAifQ.fZLLbtswEEV_JWC3elGyY1u7NN0EqIuicdpF4QU1Glks-BBISqgb6N87lJ2iBdIA3JAcnrn3cp6Z9J7VrA9h8HWed710qT47BOvazAdxkuYE6Ay6DKzOGwwiRyhX621XphzLVbrisE2bDW_SAjcFF91mva1aljDTdKzmtyWvqt1tuUnYBKx-ZuE8IKu__2nptXChR6FCn4FwrX932aRxQ5j_10mtRyN_iSCtebMQ7CRbvmPHhIHDFk2QQj2OzQ-EECVF11_R-cip2SorsoJ48fT9aFqFscaht6MDPCzy2fUiudphYJUi2kUJNXBn8kjkUaknp6jg5X0d0S-bV8CfyQ69j_kJjReI0FIRjz3u774c6OYkJzQxw28PH_d37DiTsUaS6Q8iRAbf7Yq02KV8zeY5eVUFf1vFw7_R0iCE0S829aAwYPyYSQBIg_e2XQhgW5qVRbA_-4D6Olb0I73aZNadlunKvWxzmH4SAJaXrCy2bD7OCRuu1hc5HTo0UdvfyVGRBRjdchXNHqS-IEqeFuu0WBFW2fBp1A26mERZlRWdDeg663Q8I30CgnWxTSv9oESMdk9a1M29kkbCzZNuHColKL3jsub5Nw.NRDfsvGyy-2Q3DbZt_wLW_yUYsL0P5OBLnjmRV8DacEYTvKX4_YJgrWUT5qMh_WpnZE8nKc7dTjNENGimtyvVg"
+        },
+        {
+            "name": "resourceLink",
+            "part": [
+                {
+                    "name": "vcIndex",
+                    "valueInteger": 0
+                },
+                {
+                    "name": "bundledResource",
+                    "valueUri": "resource:0"
+                },
+                {
+                    "name": "hostedResource",
+                    "valueUri": "https://fhir-myrecord.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/12724065"
+                }
+            ]
+        },
+        {
+            "name": "resourceLink",
+            "part": [
+                {
+                    "name": "vcIndex",
+                    "valueInteger": 0
+                },
+                {
+                    "name": "bundledResource",
+                    "valueUri": "resource:1"
+                },
+                {
+                    "name": "hostedResource",
+                    "valueUri": "https://fhir-myrecord.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Immunization/M197477278"
+                }
+            ]
         }
     ]
 }
@@ -72,7 +106,6 @@ This is just the steps you'll need to take to integrate with Cerner's Health Car
 
 Our FHIR Integration documentation can be found on our FHIR landing page: https://fhir.cerner.com
 * Further information for app developers can be found on our CODE landing page: https://code.cerner.com
-
 
 ### Create a Developer Account and Create your app
 
@@ -116,12 +149,12 @@ POST https://fhir-open.stagingcerner.com/beta/admin/health-cards/decode
 
 #### Example:
 Request:
-POST https://fhir-myrecord.stagingcerner.com/beta/admin/health-cards/decode
+POST https://fhir-open.stagingcerner.com/beta/admin/health-cards/decode
 
 **Request Body:**
 ```json
 {
-    "jws": "eyJhbGciOiJFUzI1NiIsInppcCI6IkRFRiIsImtpZCI6IlhVTVR0Q2pfYUlFejdWaFo0Y05YLVdKd0V1ckxBWnQ0SjRPa2dvNEc5ZFkifQ.3VI9c9QwEP0rjGj9IfkuseOK4ShCEWAmIRRMCllenwX68EiyL0fG_52V7y6kCFdQ4nGj1du37z3tE5Hek5r0IQy-zvOuly7VewfCujbzgW-l2QpwBlwmrM4bCDwHUawvqq5IGRTrdM1ElTYla1IKJWW8Ky-qVUsSYpqO1OySVUVZVqvLhEyC1E_knbAmwGMg9ffnsbvdLtutMuu2eUFZlQsHLZggufL5xMhDQsJ-gNhxD052kjcKNs8YnHUi8pq70ANXoc8Ed61_ezik8XAWJ-wkW3Z1FiO1Ho38xYO0Jor6I_N2bH6ACNFfjBBV-oipyTqjGUXSWH0_mlZBxDjwdnQC7hZX5HhxckmEVQrZIkNCcIDbo3VkHpX66hQCTv11pD4dXiH-glKxPz4G13Ag4Voq5CPX326s-PnZxLlbOYGJ8W64U9Zj5bbfc4MmZ7TZSMzhAw-RkV2VNKUspQWZ5-RVTey8po8vQ0wI7lgY_WJaDwoCxGeauBDSwMa2C4OwLa7hIt_vfQB93Fh8pF6Vy9rEfHMv21xMj0gglk5S0JLMD3NChmMQi5wOHJio7WWOCLJCjG65imbvpD5QFNFtyiqkVTZ8GnUDDi9o_AosDuA663QsokAugnVxTiv9oHhM-gbFqDfX1g8y4LbOqOgv0RX_YXQsLV6NjrJ_zQ7_ef4N.0r_Q1FGp9ouxT88r-ole37FSuP10XX1MfmHMt1JirI3QqryWBhJy5dfri7L2WYqnEPE32fNQ-KsSQbqTkTrRJg",
+    "jws": "eyJhbGciOiJFUzI1NiIsInppcCI6IkRFRiIsImtpZCI6IkJlbXNQUm83dTBrTFd4ZERKSzk2cmx4ZHFhOVpicjJsSXhzZmU3VGlFMTAifQ.fZLLbtswEEV_JWC3elGyY1u7NN0EqIuicdpF4QU1Glks-BBISqgb6N87lJ2iBdIA3JAcnrn3cp6Z9J7VrA9h8HWed710qT47BOvazAdxkuYE6Ay6DKzOGwwiRyhX621XphzLVbrisE2bDW_SAjcFF91mva1aljDTdKzmtyWvqt1tuUnYBKx-ZuE8IKu__2nptXChR6FCn4FwrX932aRxQ5j_10mtRyN_iSCtebMQ7CRbvmPHhIHDFk2QQj2OzQ-EECVF11_R-cip2SorsoJ48fT9aFqFscaht6MDPCzy2fUiudphYJUi2kUJNXBn8kjkUaknp6jg5X0d0S-bV8CfyQ69j_kJjReI0FIRjz3u774c6OYkJzQxw28PH_d37DiTsUaS6Q8iRAbf7Yq02KV8zeY5eVUFf1vFw7_R0iCE0S829aAwYPyYSQBIg_e2XQhgW5qVRbA_-4D6Olb0I73aZNadlunKvWxzmH4SAJaXrCy2bD7OCRuu1hc5HTo0UdvfyVGRBRjdchXNHqS-IEqeFuu0WBFW2fBp1A26mERZlRWdDeg663Q8I30CgnWxTSv9oESMdk9a1M29kkbCzZNuHColKL3jsub5Nw.NRDfsvGyy-2Q3DbZt_wLW_yUYsL0P5OBLnjmRV8DacEYTvKX4_YJgrWUT5qMh_WpnZE8nKc7dTjNENGimtyvVg",
     "verify_signature": true
 }
 ```
@@ -130,16 +163,12 @@ POST https://fhir-myrecord.stagingcerner.com/beta/admin/health-cards/decode
 ```json
 {
     "iss": "https://fhir-myrecord.stagingcerner.com/beta/ec2458f2-1e24-41c8-b71b-0e701af7583d",
-    "nbf": 1618277836,
+    "nbf": 1621339627,
     "vc": {
-        "@context": [
-            "https://www.w3.org/2018/credentials/v1"
-        ],
         "type": [
-            "VerifiableCredential",
             "https://smarthealth.cards#health-card",
-            "https://smarthealth.cards#covid19",
-            "https://smarthealth.cards#immunization"
+            "https://smarthealth.cards#immunization",
+            "https://smarthealth.cards#covid19"
         ],
         "credentialSubject": {
             "fhirVersion": "4.0.0",
@@ -153,14 +182,13 @@ POST https://fhir-myrecord.stagingcerner.com/beta/admin/health-cards/decode
                             "resourceType": "Patient",
                             "name": [
                                 {
-                                    "family": "HWMockOne",
+                                    "family": "SMART",
                                     "given": [
-                                        "Carlos",
-                                        "Shyann"
+                                        "WILMA"
                                     ]
                                 }
                             ],
-                            "birthDate": "1970-01-02"
+                            "birthDate": "1990-09-15"
                         }
                     },
                     {
@@ -172,46 +200,19 @@ POST https://fhir-myrecord.stagingcerner.com/beta/admin/health-cards/decode
                                 "coding": [
                                     {
                                         "system": "http://hl7.org/fhir/sid/cvx",
-                                        "code": "207"
+                                        "code": "208"
                                     }
                                 ]
                             },
                             "patient": {
                                 "reference": "resource:0"
                             },
-                            "occurrenceDateTime": "2021-02-18",
-                            "lotNumber": "000002",
+                            "occurrenceDateTime": "2021-05-04",
+                            "lotNumber": "12323",
                             "performer": [
                                 {
                                     "actor": {
-                                        "display": "Model Hospital"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "fullUrl": "resource:2",
-                        "resource": {
-                            "resourceType": "Immunization",
-                            "status": "completed",
-                            "vaccineCode": {
-                                "coding": [
-                                    {
-                                        "system": "http://hl7.org/fhir/sid/cvx",
-                                        "code": "207"
-                                    }
-                                ]
-                            },
-                            "patient": {
-                                "reference": "resource:0"
-                            },
-                            "occurrenceDateTime": "2021-01-28",
-                            "lotNumber": "0000001",
-                            "performer": [
-                                {
-                                    "actor": {
-                                        "display": "Model Hospital"
+                                        "display": "Model Clinic Umbrella"
                                     }
                                 }
                             ]
