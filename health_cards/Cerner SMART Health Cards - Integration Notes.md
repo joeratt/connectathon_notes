@@ -13,15 +13,14 @@ This is the guide for integrating with Cerner's COVID-19 SMART Health Cards impl
 
 ## Integration Notes
 
+* Cerner's SMART Health Cards implementation API documentation: http://fhir.cerner.com/millennium/r4/foundation/other/health-cards/ 
 * Cerner's implementation only supports the FHIR-based operation: https://smarthealth.cards/#via-fhir-health-cards-issue-operation 
-* Cerner's implementation only supports Immunizations. Lab Results are not yet supported.
-* Cerner's implementation does not yet support the optional claims (like `_since` and `includeIdentityClaim`)
+* Cerner's implementation does not yet support the optional claims (like `includeIdentityClaim`)
 
 ## Health Card Endpoints
 
-* Open Endpoint (no Authorization required): https://fhir-open.stagingcerner.com/beta/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/{id}/$health-cards-issue
-* Closed Endpoint: https://fhir-myrecord.stagingcerner.com/beta/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/{id}/$health-cards-issue
-  * Note - only `Patient` access is supported per the spec
+* Open Endpoint (no Authorization required): https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/{id}/$health-cards-issue
+* Closed Endpoint: https://fhir-myrecord.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/{id}/$health-cards-issue
 
 ## Example Call
 
@@ -32,7 +31,7 @@ This is the guide for integrating with Cerner's COVID-19 SMART Health Cards impl
 `Content-Type: application/fhir+json`
 
 ### Example Request
-POST https://fhir-myrecord.stagingcerner.com/beta/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/12724065/$health-cards-issue
+POST https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/12724065/$health-cards-issue
 
 **POST Body**
 ```json
@@ -58,7 +57,7 @@ POST https://fhir-myrecord.stagingcerner.com/beta/ec2458f2-1e24-41c8-b71b-0e701a
     "parameter": [
         {
             "name": "verifiableCredential",
-            "valueString": "eyJhbGciOiJFUzI1NiIsInppcCI6IkRFRiIsImtpZCI6IkJlbXNQUm83dTBrTFd4ZERKSzk2cmx4ZHFhOVpicjJsSXhzZmU3VGlFMTAifQ.fZLLbtswEEV_JWC3elGyY1u7NN0EqIuicdpF4QU1Glks-BBISqgb6N87lJ2iBdIA3JAcnrn3cp6Z9J7VrA9h8HWed710qT47BOvazAdxkuYE6Ay6DKzOGwwiRyhX621XphzLVbrisE2bDW_SAjcFF91mva1aljDTdKzmtyWvqt1tuUnYBKx-ZuE8IKu__2nptXChR6FCn4FwrX932aRxQ5j_10mtRyN_iSCtebMQ7CRbvmPHhIHDFk2QQj2OzQ-EECVF11_R-cip2SorsoJ48fT9aFqFscaht6MDPCzy2fUiudphYJUi2kUJNXBn8kjkUaknp6jg5X0d0S-bV8CfyQ69j_kJjReI0FIRjz3u774c6OYkJzQxw28PH_d37DiTsUaS6Q8iRAbf7Yq02KV8zeY5eVUFf1vFw7_R0iCE0S829aAwYPyYSQBIg_e2XQhgW5qVRbA_-4D6Olb0I73aZNadlunKvWxzmH4SAJaXrCy2bD7OCRuu1hc5HTo0UdvfyVGRBRjdchXNHqS-IEqeFuu0WBFW2fBp1A26mERZlRWdDeg663Q8I30CgnWxTSv9oESMdk9a1M29kkbCzZNuHColKL3jsub5Nw.NRDfsvGyy-2Q3DbZt_wLW_yUYsL0P5OBLnjmRV8DacEYTvKX4_YJgrWUT5qMh_WpnZE8nKc7dTjNENGimtyvVg"
+            "valueString": "eyJhbGciOiJFUzI1NiIsInppcCI6IkRFRiIsImtpZCI6Ik4ybWFHOHFPaElUZV96eVBxY3JDYTZMVF9tVzE4WnRGUHkwOWNHQUIyNHcifQ.fZJNj9MwEIb_Chqu-XKakja3BQ6sRBFiu3BY9eA4k8bIH5HtVJRV_jvjtItA2l3JlxmPH7_vaz-C9B4aGEIYfZPn_SBdakc0mUBn0GXC6txVOYqyWm_6MmVYVmnFxCZta9amBdYF43293qw6SMC0PTTsXcW2rKprlsBJQPMI4TwiNA9_b_GauzAgV2HIBHedf3sp0lgQ5uU5qfVk5G8epDWvDgp7kh3bwiEB4bBDEyRXd1P7E0WIkqLR7-h85DRQZUVWEC9230-mUxhnHHo7OYH7RT5cN5KrHRBWKaJdlNAF7kweiTwpde8UDTydbyL6qXgG_JXs0PmYH9d4gXAtFfHgbnfzbU87R3lCEzP8cft5dwOHmYy1kkx_5CEy2HZbpMU2ZWuY5-RZFex1Fbf_R-sDD5NfbOpRYcD4MCcuhDT4wXYLQdhOmuMi2J99QH39SfQig6oz647Lh8q97HJx-kUAsZyEstjAfJgTGK_WFzk9OjRR27_J0ZAVYnLLVjS7l_qCKFlarNOiIqyy4cukW3QxiXJVrqg3ouut07FH-rgI1sVrOulHxWO0O9Ki3nyyfpSBK4rtsKx5_gM.-kKaTgk-BZb_8QYc8mevqGZdFNfmvX-tVijtaYcZn-rrCK77ke4CEMeoLknfTI541lphBW6_yelp95U9bbX4fg"
         },
         {
             "name": "resourceLink",
@@ -73,7 +72,7 @@ POST https://fhir-myrecord.stagingcerner.com/beta/ec2458f2-1e24-41c8-b71b-0e701a
                 },
                 {
                     "name": "hostedResource",
-                    "valueUri": "https://fhir-myrecord.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/12724065"
+                    "valueUri": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/12724065"
                 }
             ]
         },
@@ -90,7 +89,7 @@ POST https://fhir-myrecord.stagingcerner.com/beta/ec2458f2-1e24-41c8-b71b-0e701a
                 },
                 {
                     "name": "hostedResource",
-                    "valueUri": "https://fhir-myrecord.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Immunization/M197477278"
+                    "valueUri": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Immunization/M197477278"
                 }
             ]
         }
@@ -154,7 +153,7 @@ POST https://fhir-open.stagingcerner.com/beta/admin/health-cards/decode
 **Request Body:**
 ```json
 {
-    "jws": "eyJhbGciOiJFUzI1NiIsInppcCI6IkRFRiIsImtpZCI6IkJlbXNQUm83dTBrTFd4ZERKSzk2cmx4ZHFhOVpicjJsSXhzZmU3VGlFMTAifQ.fZLLbtswEEV_JWC3elGyY1u7NN0EqIuicdpF4QU1Glks-BBISqgb6N87lJ2iBdIA3JAcnrn3cp6Z9J7VrA9h8HWed710qT47BOvazAdxkuYE6Ay6DKzOGwwiRyhX621XphzLVbrisE2bDW_SAjcFF91mva1aljDTdKzmtyWvqt1tuUnYBKx-ZuE8IKu__2nptXChR6FCn4FwrX932aRxQ5j_10mtRyN_iSCtebMQ7CRbvmPHhIHDFk2QQj2OzQ-EECVF11_R-cip2SorsoJ48fT9aFqFscaht6MDPCzy2fUiudphYJUi2kUJNXBn8kjkUaknp6jg5X0d0S-bV8CfyQ69j_kJjReI0FIRjz3u774c6OYkJzQxw28PH_d37DiTsUaS6Q8iRAbf7Yq02KV8zeY5eVUFf1vFw7_R0iCE0S829aAwYPyYSQBIg_e2XQhgW5qVRbA_-4D6Olb0I73aZNadlunKvWxzmH4SAJaXrCy2bD7OCRuu1hc5HTo0UdvfyVGRBRjdchXNHqS-IEqeFuu0WBFW2fBp1A26mERZlRWdDeg663Q8I30CgnWxTSv9oESMdk9a1M29kkbCzZNuHColKL3jsub5Nw.NRDfsvGyy-2Q3DbZt_wLW_yUYsL0P5OBLnjmRV8DacEYTvKX4_YJgrWUT5qMh_WpnZE8nKc7dTjNENGimtyvVg",
+    "jws": "eyJhbGciOiJFUzI1NiIsInppcCI6IkRFRiIsImtpZCI6Ik4ybWFHOHFPaElUZV96eVBxY3JDYTZMVF9tVzE4WnRGUHkwOWNHQUIyNHcifQ.fZJNj9MwEIb_Chqu-XKakja3BQ6sRBFiu3BY9eA4k8bIH5HtVJRV_jvjtItA2l3JlxmPH7_vaz-C9B4aGEIYfZPn_SBdakc0mUBn0GXC6txVOYqyWm_6MmVYVmnFxCZta9amBdYF43293qw6SMC0PTTsXcW2rKprlsBJQPMI4TwiNA9_b_GauzAgV2HIBHedf3sp0lgQ5uU5qfVk5G8epDWvDgp7kh3bwiEB4bBDEyRXd1P7E0WIkqLR7-h85DRQZUVWEC9230-mUxhnHHo7OYH7RT5cN5KrHRBWKaJdlNAF7kweiTwpde8UDTydbyL6qXgG_JXs0PmYH9d4gXAtFfHgbnfzbU87R3lCEzP8cft5dwOHmYy1kkx_5CEy2HZbpMU2ZWuY5-RZFex1Fbf_R-sDD5NfbOpRYcD4MCcuhDT4wXYLQdhOmuMi2J99QH39SfQig6oz647Lh8q97HJx-kUAsZyEstjAfJgTGK_WFzk9OjRR27_J0ZAVYnLLVjS7l_qCKFlarNOiIqyy4cukW3QxiXJVrqg3ouut07FH-rgI1sVrOulHxWO0O9Ki3nyyfpSBK4rtsKx5_gM.-kKaTgk-BZb_8QYc8mevqGZdFNfmvX-tVijtaYcZn-rrCK77ke4CEMeoLknfTI541lphBW6_yelp95U9bbX4fg",
     "verify_signature": true
 }
 ```
@@ -162,8 +161,8 @@ POST https://fhir-open.stagingcerner.com/beta/admin/health-cards/decode
 **Example Response:**
 ```json
 {
-    "iss": "https://fhir-myrecord.stagingcerner.com/beta/ec2458f2-1e24-41c8-b71b-0e701af7583d",
-    "nbf": 1621339627,
+    "iss": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d",
+    "nbf": 1641914771,
     "vc": {
         "type": [
             "https://smarthealth.cards#health-card",
@@ -212,7 +211,7 @@ POST https://fhir-open.stagingcerner.com/beta/admin/health-cards/decode
                             "performer": [
                                 {
                                     "actor": {
-                                        "display": "Model Clinic Umbrella"
+                                        "display": "Model Hospital"
                                     }
                                 }
                             ]
